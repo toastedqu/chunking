@@ -1,4 +1,6 @@
-# SmartChunk
+# Is Semantic Chunking Worth the Computational Cost?
+Paper: https://arxiv.org/abs/2410.13070
+
 This project evaluates the performance of different chunking strategies for RAG (Retrieval-Augmented Generation).
 
 In a RAG system, documents are divided into chunks. The system calculates relevance scores between each chunk and a user query, retrieves the most relevant chunks, and passes them to a generative language model to produce a response. Both the content and size of the chunks impact retrieval and generation performance, as demonstrated by [Chen et al. (2023)](https://arxiv.org/abs/2312.06648) and [Wadhwa et al. (2024)](https://arxiv.org/abs/2406.12824).
@@ -7,8 +9,6 @@ Since ground-truth chunks or query-chunk relevance scores are unavailable, it is
 1. **Document Retrieval**: Each retrieved chunk is mapped to its source document, and the results are compared with ground-truth query-document relevance scores.
 2. **Evidence Retrieval**: Each retrieved chunk is mapped to its corresponding evidence, and the results are compared with ground-truth query-evidence relevance scores.
 3. **Generation**: Queries and retrieved chunks are fed into an LLM to generate answers, which are then compared to ground-truth answers.
-
-This page only covers technical details. See [Notion](https://www.notion.so/vectara/SmartChunk-076aa4f2f2384331a2e2c4a6ea551e0e) for other info.
 
 # Modules
 ## Src
